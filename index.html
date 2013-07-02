@@ -4,12 +4,13 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<title>Can-Do</title>
-		<script type="text/javascript" src="script/can_do.js"></script>
+		<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="js/can_do.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/can_do.css">
 	</head>	
 	<body>
 		<header>
-			<span class="date">01/07/2013</span>
+			<input type="button" class="bt_inventory">
 			<span class="page_title">Can-Do</span>
 			<input type="button" class="bt_settings">
 		</header>
@@ -19,9 +20,7 @@
 				</div>
 				<input type="button" class="bt_create">
 		</div>
-		<div>
-			<span>This is the area for the new tasks</span>
-			<ul class="task_list"></ul>
+		<div class="tasks">
 		</div>
 	</body>
 </html>
