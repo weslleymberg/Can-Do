@@ -16,7 +16,7 @@ header {
 	text-align: center;
 	width: 100%;
 	height: 48px;
-	line-height: 48px;
+	line-height: 54px;
 	color: white;
 	z-index: 2;
 	border-bottom: 3px solid;
@@ -24,8 +24,8 @@ header {
 	position: fixed;
 	top: 0px;
 	box-shadow: 0px -2px 13px 1px #000000;
-	/*background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);*/
-	background: linear-gradient(to bottom, rgba(0,0,0,1.85) 0%,rgba(0,0,0,0.20) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.20) 100%);
+	background:-webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0.20));
 }
 
 /*INVENTORY BUTTON*/
@@ -44,15 +44,18 @@ header input.bt_inventory {
 	border: 0px;
 }
 
-/*PRESSED 'INVENTORY' BUTTON*/
+/*PRESSED 'INVENTORY' BUTTON
 header input.bt_inventory:active {
-	box-shadow: inset 0 3px 8px #000000;
-	border-radius: 100%;
-}
+       box-shadow: inset 0 3px 8px #000000;
+       -webkit-box-shadow: inset 0 3px 8px #000000;
+       border-radius: 100%;
+}*/
+
 
 /*PAPER TITLE*/
 header span.page_title {
 	font-size: 35px;
+	cursor: default;
 }
 
 /*'SETTINGS' BUTTON*/
@@ -71,11 +74,13 @@ header input.bt_settings {
 	border: 0px;
 }
 
-/*PRESSED 'SETTINGS' BUTTON*/
+/*PRESSED 'SETTINGS' BUTTON
 header input.bt_settings:active {
-	box-shadow: inset 0 3px 8px #000000;
-	border-radius: 100%;
-}
+       box-shadow: inset 0 3px 8px #000000;
+       -webkit-box-shadow: inset 0 3px 8px #000000;
+       border-radius: 100%;
+}*/
+
 
 /*INPUT DATA POSITION*/
 div.input_data {
@@ -86,7 +91,12 @@ div.input_data {
 div.input_data div.new_task {
 	width: auto;
 	margin-right: 50px;
-	margin-left: 3px;
+	margin-left: 5px;
+}
+
+input {
+	outline: 0 !important ;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important ;
 }
 
 /*TEXT INPUT ELEMENT*/
@@ -118,11 +128,12 @@ div.input_data input.bt_create {
 	margin-top: -43px;
 }
 
-/*PRESSED 'ADD NEW TASK BUTTON'*/
+/*PRESSED 'ADD NEW TASK BUTTON'
 div.input_data input.bt_create:active {
-	box-shadow: inset 0 3px 8px #000000;
-	border-radius: 100%;
-}
+       box-shadow: inset 0 3px 8px #000000;
+       -webkit-box-shadow: inset 0 3px 8px #000000;
+       border-radius: 100%;
+}*/
 
 /*TASKS CONTAINER*/
 div.tasks {
@@ -147,6 +158,7 @@ div.tasks div {
 /*INDIVIDUAL TASKS TITLE*/
 div.tasks div span {
 	margin-left: 10px;
+	cursor: default;
 }
 
 /*PLACE HOLDER TO AVOID SCROLL PROBLEMS*/
@@ -165,7 +177,9 @@ div.footer {
 	border-top: 2px solid;
 	border-color: black;
 	color: white;
-	background: linear-gradient(to top, rgba(0,0,0,1.85) 0%,rgba(0,0,0,0.20) 100%);
+	background: linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.20) 100%);
+	background:-webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,0.20));
+	box-shadow: 0px 1px 13px 0px #000000;
 }
 
 div.footer span {
