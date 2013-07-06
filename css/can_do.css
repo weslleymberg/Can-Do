@@ -7,8 +7,9 @@
 body {
 	margin: 0;
 	font-family: KiteOne;
-	background-image: url(../images/paper_texture.png);
-	background-color: transparent;
+	/*background-image: url(../images/paper_texture.png);
+	background-color: transparent;*/
+	background: #fbf7f3;
 }
 
 /*DOCUMENT HEADER*/
@@ -24,8 +25,9 @@ header {
 	position: fixed;
 	top: 0px;
 	box-shadow: 0px -2px 13px 1px #000000;
-	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.20) 100%);
-	background:-webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0.20));
+	/*background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.20) 100%);
+	background:-webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0.20));*/
+	background: #302416;
 }
 
 /*INVENTORY BUTTON*/
@@ -110,6 +112,7 @@ div.input_data div.new_task input.new_task {
 	border-color: black;/*#87CEFA*/
 	background-color: transparent;
 	font-family: KiteOne;
+	color: #62823c;
 }
 
 /*'ADD NEW TASK' BUTTON*/
@@ -124,8 +127,8 @@ div.input_data input.bt_create {
 	border: 0px;
 
 	position: absolute;
-	right: 4px;
-	margin-top: -43px;
+	right: 2px;
+	margin-top: -41px;
 }
 
 /*PRESSED 'ADD NEW TASK BUTTON'
@@ -142,9 +145,10 @@ div.tasks {
 
 /*INDIVIDUAL TASKS*/
 div.tasks div {
-	line-height: 34px;
+	line-height: 42px;
+	background: #f43d36;
 	border: 1px solid;
-	border-color: black;
+	border-color: #9e1519;
 	border-radius: 5px;
 	margin-right: 5px;
 	margin-left: 5px;
@@ -159,6 +163,7 @@ div.tasks div {
 div.tasks div span {
 	margin-left: 10px;
 	cursor: default;
+	color: white;
 }
 
 /*PLACE HOLDER TO AVOID SCROLL PROBLEMS*/
@@ -177,9 +182,10 @@ div.footer {
 	border-top: 2px solid;
 	border-color: black;
 	color: white;
-	background: linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.20) 100%);
-	background:-webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,0.20));
+	/*background: linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.20) 100%);
+	background:-webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,0.20));*/
 	box-shadow: 0px 1px 13px 0px #000000;
+	background: #302416;
 }
 
 div.footer span {
