@@ -21,12 +21,12 @@ $(function(){
 	function add_task(title) {
 		if (title!="") {
 			$("input.new_task").get(0).value="";
-			$("div.tasks").append('<div class=swipe><span>'+title+'</span></div>');
+			$("ul#inventory").append('<li class=\"swipe open\"><span>'+title+'</span></li>');
 			$("div.footer span.counter").text("Tasks: "+(count+=1));
 		}
 	}
 
-	$("div.tasks").on('swipeRight', ".swipe", function() {
+	$("ul.task_list").on('swipeRight', "li.swipe", function() {
 		$(this).animate({'margin-left':$(window).width(), 
 						 'margin-right':-$(window).width()}, 300, 'linear', function() {
 			$(this).remove();

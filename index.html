@@ -6,6 +6,7 @@
 		<title>Can-Do</title>
 		<script type="text/javascript" src="js/zepto.min.js"></script>
 		<script type="text/javascript" src="js/zepto.touch.js"></script>
+		<script type="text/javascript" src="js/sortable.js"></script>
 		<script type="text/javascript" src="js/can_do.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/can_do.css">
 	</head>	
@@ -21,10 +22,11 @@
 				</div>
 				<input type="button" class="bt_create">
 		</div>
-		<div class="tasks"></div>
-		<div class="placeholder"></div>
-		<div class="footer">
-			<span class="counter">Tasks: 0</span>
+		<div class="tasks">
+			<span class="list_title">WHAT I'M GOING TO DO...</span>
+			<ul id="today" class="task_container"></ul>
+			<span class="list_title">WHAT I CAN DO...</span>
+			<ul id="inventory" class="task_container"></ul>
 		</div>
 	</body>
 </html>

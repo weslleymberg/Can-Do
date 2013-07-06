@@ -9,7 +9,7 @@ body {
 	font-family: KiteOne;
 	/*background-image: url(../images/paper_texture.png);
 	background-color: transparent;*/
-	background: #fbf7f3;
+	background: black;
 }
 
 /*DOCUMENT HEADER*/
@@ -27,7 +27,7 @@ header {
 	box-shadow: 0px -2px 13px 1px #000000;
 	/*background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.20) 100%);
 	background:-webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0.20));*/
-	background: #302416;
+	background: black;
 }
 
 /*INVENTORY BUTTON*/
@@ -45,13 +45,6 @@ header input.bt_inventory {
 	top: 2px;
 	border: 0px;
 }
-
-/*PRESSED 'INVENTORY' BUTTON
-header input.bt_inventory:active {
-       box-shadow: inset 0 3px 8px #000000;
-       -webkit-box-shadow: inset 0 3px 8px #000000;
-       border-radius: 100%;
-}*/
 
 
 /*PAPER TITLE*/
@@ -76,17 +69,11 @@ header input.bt_settings {
 	border: 0px;
 }
 
-/*PRESSED 'SETTINGS' BUTTON
-header input.bt_settings:active {
-       box-shadow: inset 0 3px 8px #000000;
-       -webkit-box-shadow: inset 0 3px 8px #000000;
-       border-radius: 100%;
-}*/
-
-
 /*INPUT DATA POSITION*/
 div.input_data {
 	margin-top: 48px;
+	border-bottom: 2px solid;
+	border-bottom-color: white;
 }
 
 /*TEXT INPUT DIV*/
@@ -117,7 +104,7 @@ div.input_data div.new_task input.new_task {
 
 /*'ADD NEW TASK' BUTTON*/
 div.input_data input.bt_create {
-	background-image: url(../images/plus.png);
+	background-image: url(../images/plus_white.png);
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-color: transparent;
@@ -131,64 +118,53 @@ div.input_data input.bt_create {
 	margin-top: -41px;
 }
 
-/*PRESSED 'ADD NEW TASK BUTTON'
-div.input_data input.bt_create:active {
-       box-shadow: inset 0 3px 8px #000000;
-       -webkit-box-shadow: inset 0 3px 8px #000000;
-       border-radius: 100%;
-}*/
-
 /*TASKS CONTAINER*/
 div.tasks {
 	margin-top: 20px;
 }
 
+div.tasks span.list_title {
+	color: white;
+	font-weight: bold;
+	color: rgb(255, 246, 21);
+}
+
+ul.task_container {
+	padding-left: 0px;
+	margin-top: 6px;
+}
+
 /*INDIVIDUAL TASKS*/
-div.tasks div {
+ul.task_container li {
+	list-style: none;
 	line-height: 42px;
-	background: #f43d36;
-	border: 1px solid;
-	border-color: #9e1519;
-	border-radius: 5px;
-	margin-right: 5px;
-	margin-left: 5px;
-	margin-bottom: 12px;
+	border-bottom: 3px solid;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-bottom: 10px;
 	font-size: 19px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	color: white;
+}
+
+ul.task_container li.open {
+	border-color: #FF272D;
+}
+
+
+ul.task_container li.ongoing {
+	border-color: #FF6A24	;
+}
+
+ul.task_container li.closed {
+	border-color: #63FF27;
 }
 
 /*INDIVIDUAL TASKS TITLE*/
-div.tasks div span {
+ul.task_container li span {
 	margin-left: 10px;
 	cursor: default;
 	color: white;
-}
-
-/*PLACE HOLDER TO AVOID SCROLL PROBLEMS*/
-div.placeholder {
-	width: 100%;
-	height: 22px;
-	bottom: 0px;
-}
-
-/*FOOTER*/
-div.footer {
-	width: 100%;
-	height: 22px;
-	position: fixed;
-	bottom: 0px;
-	border-top: 2px solid;
-	border-color: black;
-	color: white;
-	/*background: linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.20) 100%);
-	background:-webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,0.20));*/
-	box-shadow: 0px 1px 13px 0px #000000;
-	background: #302416;
-}
-
-div.footer span {
-	margin-left: 5px;
-	bottom: 2px;
 }
