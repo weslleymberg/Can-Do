@@ -127,11 +127,14 @@ div.tasks span.list_title {
 	color: white;
 	font-weight: bold;
 	color: rgb(255, 246, 21);
+	cursor: default;
 }
 
 ul.task_container {
 	padding-left: 0px;
 	margin-top: 6px;
+	outline: 0 !important ;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important ;
 }
 
 /*INDIVIDUAL TASKS*/
@@ -164,7 +167,19 @@ ul.task_container li.closed {
 
 /*INDIVIDUAL TASKS TITLE*/
 ul.task_container li span {
-	margin-left: 10px;
 	cursor: default;
 	color: white;
+}
+
+/*INDIVUDUAL TASKS BUTTON*/
+ul.task_container li input.bt_move {
+	background-image: url(../images/arrow.png);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: transparent;
+	border: 0px;
+	width: 42px;
+	height: 42px;
+	padding-bottom: 14px;
 }
