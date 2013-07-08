@@ -36,16 +36,23 @@ $(function(){
 	});
 
 	$("ul.task_container").on(bt_event, "input.bt_move", function(event) {
-		var location = $(this).closest(".move").closest(".task_container");
-		if (location.attr("id") == "inventory") {
+		var task = $(this).closest(".move");
+		var container = task.closest(".task_container");
+
+		if (container.attr("id") == "inventory") {
 			$(this).closest(".move").removeClass("open");
 			$(this).closest(".move").addClass("ongoing");
 			$("ul#today").append($(this).closest(".move"));
 		}
-		if (location.attr("id") == "today") {
+
+		if (container.attr("id") == "today" && task.hasClass("ongoing")) {
 			$(this).closest(".move").removeClass("ongoing");
 			$(this).closest(".move").addClass("open");
 			$("ul#inventory").append($(this).closest(".move"));
+		}
+
+		if (container.attr("id") == "today" && task.hasClass("closed")) {
+			task.remove();
 		}
 	})
 });

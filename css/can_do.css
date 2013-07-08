@@ -7,8 +7,6 @@
 body {
 	margin: 0;
 	font-family: KiteOne;
-	/*background-image: url(../images/paper_texture.png);
-	background-color: transparent;*/
 	background: black;
 }
 
@@ -25,8 +23,6 @@ header {
 	position: fixed;
 	top: 0px;
 	box-shadow: 0px -2px 13px 1px #000000;
-	/*background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.20) 100%);
-	background:-webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0.20));*/
 	background: black;
 }
 
@@ -55,7 +51,7 @@ header span.page_title {
 
 /*'SETTINGS' BUTTON*/
 header input.bt_settings {
-	background-image: url(../images/settings_white.png);
+	background-image: url(../images/more.png);
 	background-size: 70%;
 	background-repeat: no-repeat;
 	background-color: transparent;
@@ -71,7 +67,7 @@ header input.bt_settings {
 
 /*INPUT DATA POSITION*/
 div.input_data {
-	margin-top: 48px;
+	margin-top: 0px;
 	border-bottom: 2px solid;
 	border-bottom-color: white;
 }
@@ -80,12 +76,30 @@ div.input_data {
 div.input_data div.new_task {
 	width: auto;
 	margin-right: 50px;
-	margin-left: 5px;
+	margin-left: 46px;
+	border-left: 1px solid white;
 }
 
 input {
 	outline: 0 !important ;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important ;
+}
+
+/*'MORE OPTIONS' BUTTON*/
+div.input_data input.bt_more {
+	background-image: url(../images/more.png);
+	background-size: 56%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: center;
+
+	width: 42px;
+	height: 42px;
+	border: 0px;
+
+	position: absolute;
+	left: 2px;
+	margin-top: 3px;
 }
 
 /*TEXT INPUT ELEMENT*/
@@ -94,6 +108,7 @@ div.input_data div.new_task input.new_task {
 	height: 22px;
 	font-size: 20px;
 	padding-top: 20px;
+	margin-left: 4px;
 	border: none;
 	border-bottom: 2px solid;
 	border-color: black;/*#87CEFA*/
@@ -145,22 +160,24 @@ ul.task_container li {
 	margin-right: 0px;
 	margin-left: 0px;
 	margin-bottom: 10px;
-	font-size: 19px;
+	font-size: 17px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	color: white;
 }
 
+/*TASKS I CAN DO*/
 ul.task_container li.open {
 	border-color: #FF272D;
 }
 
-
+/*TASKS I'M GOING TO DO*/
 ul.task_container li.ongoing {
 	border-color: #FF6A24	;
 }
 
+/*TASKS I DID*/
 ul.task_container li.closed {
 	border-color: #63FF27;
 }
@@ -173,7 +190,6 @@ ul.task_container li span {
 
 /*INDIVUDUAL TASKS BUTTON*/
 ul.task_container li input.bt_move {
-	background-image: url(../images/arrow.png);
 	background-size: 60%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -181,5 +197,17 @@ ul.task_container li input.bt_move {
 	border: 0px;
 	width: 42px;
 	height: 42px;
-	padding-bottom: 14px;
+	padding-bottom: 0px;
+}
+
+ul.task_container li.open input.bt_move {
+	background-image: url(../images/arrow_up.png);
+}
+
+ul.task_container li.ongoing input.bt_move {
+	background-image: url(../images/arrow_down.png);
+}
+
+ul.task_container li.closed input.bt_move {
+	background-image: url(../images/close.png);
 }
